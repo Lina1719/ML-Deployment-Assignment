@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+
+    <title> garments worker productivity Home</title>
+</head>
+
+<body>
+
+    <h1>SVM Gender Prediction</h1>
+
+    <p>Enter the feature here</p>
+
+    <form action="{{url_for('predict')}}" method="post">
+
+        <!-- Input From The User -->
+
+        <ul>
+
+        <!-- This is the title for the input-->
+       <!----> <li><label for="smv">smv:</label>
+            <!-- placeholder is the hint text-->
+              <input type="text" name="smv" placeholder="smv" required="required" />
+          </li>
+
+        <!-- This is the title for the input-->
+        <li><label for="targeted_productivity">targeted productivity:</label>
+          <!-- placeholder is the hint text-->
+            <input type="text" name="targeted_productivity" placeholder="targeted_productivity" required="required" />
+        </li>
+
+        <li><label for="over_time">overtime:</label>
+            <input type="text" name="over_time" placeholder="over_time" required="required" />
+        </li>
+
+        <li><label for="incentive">incentive:</label>
+            <input type="text" name="incentive" placeholder="Number between 0 and 100" required="required" />
+        </li>
+
+        <li><label for="idle_time">idle time:</label>
+            <input type="text" name="idle_time" placeholder="idle_time" required="required" />
+        </li>
+
+        <li><label for="idle_men">idle men:</label>
+            <input type="text" name="idle_men" placeholder="idle_men" required="required" />
+        </li>
+
+        <li><label for="no_of_style_change">no_of_style_change:</label>
+            <input type="text" name="no_of_style_change" placeholder="no_of_style_change" required="required" />
+        </li>
+
+        <li><label for="no_of_workers">no_of_workers:</label>
+            <input type="text" name="no_of_workers" placeholder="no_of_workers" required="required" />
+        </li>
+
+        <li><label for="actual_productivity">actual_productivity:</label>
+            <input type="text" name="actual_productivity" placeholder="actual_productivity" required="required" />
+        </li>
+
+        <!-- submit button -->
+        <li><button id="submit" type="submit">Predict</button></li>
+        </ul>
+
+    </form>
+
+</body>
+</html>
